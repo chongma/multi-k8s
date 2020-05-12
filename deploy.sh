@@ -9,5 +9,5 @@ docker push chongma/multi-server:$SHA
 docker push chongma/multi-worker:$SHA
 kubectl apply -f k8s
 kubectl set image deployments/server-deployment server=chongma/multi-server:$SHA
-kubectl set image deployments/client-deployment server=chongma/multi-client:$SHA
-kubectl set image deployments/worker-deployment server=chongma/multi-worker:$SHA
+kubectl set image deployments/client-deployment client=chongma/multi-client:$SHA
+kubectl set image deployments/worker-deployment worker=chongma/multi-worker:$SHA
